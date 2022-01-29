@@ -1,0 +1,35 @@
+ 
+
+ .transimg{
+     width: 100%;
+      display: block;
+     margin: auto;
+    transition: all .6s;
+ }
+
+ .myrespimg{
+    width: 450px;
+    border-radius: 50px;
+
+}
+
+.modals{
+    opacity: 0;
+    transition: all .3s;
+    pointer-events: none;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 35px;
+    position: absolute;
+    width: 60vw;
+    border-radius: 25px;
+    box-shadow: 7px 7px 8px rgba(204, 204, 204, 0.349);
+
+    &.show{
+        opacity: 1;
+        top: 50%;
+        pointer-events: all;
+    }
+}
