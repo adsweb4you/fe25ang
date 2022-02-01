@@ -1,9 +1,23 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-4" *ngFor="let Post of Posts">
+        <div class="col-lg-4" *ngFor="let Post of Posts; index as i">
             <div class="card shadow p-3"  >
                <img [src]="Post.img" alt="">
-               <h1>{{Post.title}}</h1>
+
+                <div class="galery">
+                  <img [src]="img" [ngStyle]="{'color': 'red', 'text-align':'center'}"  (click)="changimg(img, i)" width="50" height="50" *ngFor="let img of Post.slide">
+                </div>
+
+               <div [ngSwitch]="Post.img">
+                   <div *ngSwitchCase="'assets/img/img2.png'">
+                      <p>წარწერა</p>
+                   </div>
+                   <div *ngSwitchDefault>
+                    <h1>{{Post.title}}</h1>
+                   </div>
+               </div>
+
+               
                <p>დამატებულია {{Post.created_at}}</p>
                <span class="bg-dark text-white" *ngIf="Post.view > 100;else noview"> პოპულარული </span>
                 <ng-template  #noview> 
@@ -16,3 +30,11 @@
         </div>
     </div>
 </div>
+
+<div [ngSwitch]="lang">
+    <div *ngSwitchCase="'ka'">test</div>
+    <div *ngSwitchCase="'en'">test1</div>
+    <div *ngSwitchCase="'ru'">test2</div>
+    <div *ngSwitchCase="'fr'">test3</div>
+    <div *ngSwitchDefault>default</div>
+  </div>
