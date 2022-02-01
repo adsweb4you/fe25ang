@@ -1,4 +1,9 @@
-<h1 *ngIf="isOpen">მთავარი გვერდი</h1>
+
+<app-nav></app-nav>
+
+<app-posts></app-posts>
+
+<!-- <h1 *ngIf="isOpen">მთავარი გვერდი</h1>
 <small>{{isOpen  ? 'teqst' : "sad"}}</small>
 <img [src]="src" class="transimg"  [ngClass]="imgtype == true ? respImg : '' "  [alt]="alt">
 <div>
@@ -8,10 +13,18 @@
   <button class="btn btn-success" (click)="show()">მოდალის გახსა (class) </button>
 </div>
 
+
+<div class="container">
+  <div class="col-lg-4 mx-auto">
+    <h1>{{Blog.title}}</h1>
+  </div>
+</div> -->
+
+
 <!-- <div *ngIf="open" class="modals" [ngClass]="open ? 'show' : ''">
    <h1>მოდალი</h1>
 </div> -->
 
-<div *ngIf="open" class="modals show"  >
+<!-- <div *ngIf="open" class="modals show"  >
   <h1>მოდალი</h1>
-</div>  
+</div>   -->

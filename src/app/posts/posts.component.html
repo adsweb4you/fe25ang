@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let Post of Posts">
+            <div class="card shadow p-3"  >
+               <img [src]="Post.img" alt="">
+               <h1>{{Post.title}}</h1>
+               <p>დამატებულია {{Post.created_at}}</p>
+               <span class="bg-dark text-white" *ngIf="Post.view > 100;else noview"> პოპულარული </span>
+                <ng-template  #noview> 
+                    
+                 <span class="bg-success">{{Post.view}}</span>     
+                
+                </ng-template>
+            </div>
+
+        </div>
+    </div>
+</div>

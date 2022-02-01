@@ -14,6 +14,14 @@ export class AppComponent {
   respImg = "myrespimg";
   imgtype = true;
 
+  Blog = {
+    title:"ბლოგის დასახელება",
+    img:"assets/img/img.png",
+    price:250,
+    disc:false,
+    weight:350
+  }
+
   open = false;
 
   updateDate(){
