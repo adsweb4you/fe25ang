@@ -1,7 +1,32 @@
 
 <app-nav></app-nav>
 
-<app-posts></app-posts>
+<div class="container">
+  <div class="col-lg-8 mx-auto">
+      <div class="row">
+    <div class="col-lg-4">
+      <img [src]="Prod.proper[activecolor].img" class="img-fluid" alt="">
+    </div>
+
+    <div class="col-lg-8">
+     <h3>ფასი {{Prod.proper[activecolor].price}} $</h3>
+     <h1>{{Prod.name}} | {{Prod.proper[activecolor].color}}</h1>
+
+     <div class="color">
+       <span class="spcolor" *ngFor="let colors of  Prod.proper; index as i;" [ngStyle]="{'border-color': colors.color, 'background-color': activecolor == i ?  colors.color : ''}" (click)="changedata(i)" ></span>  
+     </div>
+
+     <button class="btn btn-success" (click)="addcart()">კალათათი</button>
+
+    </div>
+
+  </div>
+  </div>
+
+</div>
+
+
+<!-- <app-posts></app-posts> -->
 
 <!-- <h1 *ngIf="isOpen">მთავარი გვერდი</h1>
 <small>{{isOpen  ? 'teqst' : "sad"}}</small>
@@ -28,3 +53,4 @@
 <!-- <div *ngIf="open" class="modals show"  >
   <h1>მოდალი</h1>
 </div>   -->
+ 

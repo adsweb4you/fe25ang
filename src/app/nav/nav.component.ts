@@ -11,8 +11,22 @@ export class NavComponent implements OnInit {
   mytext = "bla bbla"
   constructor() { }
 
+
+ ob = {
+   pro:"asd",
+   price:25
+ }
+
   ngOnInit(): void {
       console.log("გვერდი ჩაიტვირთა");
+
+      for (const key in this.ob) {
+      
+          const element = key;
+        console.log(element);
+     
+      }
+
   }
 
 

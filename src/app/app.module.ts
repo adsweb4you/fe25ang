@@ -17,6 +17,7 @@ import { PostsComponent } from './posts/posts.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+ 
      
   ],
   providers: [],
