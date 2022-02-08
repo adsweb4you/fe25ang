@@ -20,6 +20,11 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
       console.log("გვერდი ჩაიტვირთა");
 
+      // window.addEventListener('scroll', function(e){
+      //   console.log(e)
+      // })
+
+
       for (const key in this.ob) {
       
           const element = key;

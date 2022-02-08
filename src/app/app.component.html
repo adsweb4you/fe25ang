@@ -1,7 +1,7 @@
+<!-- 
+<app-nav></app-nav> -->
 
-<app-nav></app-nav>
-
-<div class="container">
+<!-- <div class="container">
   <div class="col-lg-8 mx-auto">
       <div class="row">
     <div class="col-lg-4">
@@ -23,7 +23,7 @@
   </div>
   </div>
 
-</div>
+</div> -->
 
 
 <!-- <app-posts></app-posts> -->
@@ -54,3 +54,60 @@
   <h1>მოდალი</h1>
 </div>   -->
  
+<!-- 
+<div class="col-lg-5 mx-auto shadow rounded p-5">
+   <form action="" #loginForm="ngForm" (submit)="stordate(loginForm.value)">
+
+    <input type="text" required   pattern="[@]+" #title="ngModel" ngModel  name="title" class="form-control mb-4">
+
+    <small *ngIf="title.invalid && title.dirty" class="text-danger"> შეიყვანეთ სწორი მონაცემები </small>
+
+
+    <input type="password" required ngModel minlength="6"  #password="ngModel" name="password" class="form-control mb-4">
+    <small *ngIf="password.invalid && password.dirty" class="text-danger">  სიმბოლოების რაოდენობა უნდა აღემატებოდეს 6  </small>
+
+    <button class="btn btn-dark" [disabled]="loginForm.invalid">გაგზავნა</button>
+ 
+   </form>
+
+   <hr>
+
+
+   <form action="" [formGroup]="Loginform" (submit)="myform()">
+
+    <input type="text" formControlName="email"     class="form-control mb-3">
+
+    <input type="checkbox"  (change)="setram($event)" value="60" name="" id=""> 60gb
+    <input type="checkbox"   (change)="setram($event)" value="120" name="" id=""> 120gp
+ 
+    <select  formControlName="city"  >
+      <option value="1"> 1</option>
+      <option value="21"> 21</option>
+      <option value="13"> 13</option>
+      <option value="1"> 1</option>
+    </select>
+
+    <small class="text-danger" *ngIf="email && email.invalid && email.dirty">შეიყვანეთ სწორი მნიშვნელობა</small>  
+ 
+    <input type="password" formControlName="password" class="form-control mb-3">
+ 
+    <button class="btn btn-success" [disabled]="Loginform.invalid">გაგაზავნა</button>
+
+   </form>
+ 
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 mb-3" *ngFor="let post of Allposts">
+      <div class="card">
+        <img src="https://images2.boardingschoolreview.com/photo/1122x864/1000/593/img-academy-oqxuxY.jpg" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <p class="card-text">{{post.body}}</p>
+          <a href="#" class="btn btn-primary">სრულად ნახვა</a>
+          <button class="btn btn-success" (click)="addcart(post.id, $event)">სრულად ნახვა</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
